@@ -19,7 +19,6 @@ PREDEFINED_ANSWERS = {
 
 app = FastAPI(title="Godot RAG API")
 
-# CORS (required for browser)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -96,4 +95,5 @@ def chat(req: ChatRequest):
     answer = ask_ollama(prompt)
 
     return {"answer": answer}
+
 
