@@ -6,7 +6,7 @@ import requests
 from search_chunks import search, initialize
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL = "phi3"
+MODEL = "phi3:latest"
 TOP_K = 5
 
 PREDEFINED_ANSWERS = {
@@ -96,3 +96,4 @@ def chat(req: ChatRequest):
     answer = ask_ollama(prompt)
 
     return {"answer": answer}
+
