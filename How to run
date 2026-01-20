@@ -1,6 +1,23 @@
-This is a model specifically trained for godot game engine v4.0
+This is a model specifically trained for godot game engine v4.0. Also right now it has basic knowledge only as this is its first iteration.
 This requires minimum of 4GB vramm GPU along with 16GB RAM.
+Ollama must be installed along with a model using command - ollama pull model_name  or using its interface.
+In api.py, rag_chat.py and interactive_chat.py replace the "MODEL" variable with the one you downloaded
 This can run on either CLI mode or a Web UI mode
 To run on CLI mode it has two modes.
+
 CLI mode 1-
-On Terminal just simply execute rag
+1- On Terminal just simply execute rag_chat.py and pass the question alongside such as rag_chat.py "Your Question here"
+2- It will start to load the model in background and respond to your query accordingly.
+3- This is single question only mode. To ask more question you have to execute this program with question every time you have to ask a question
+
+CLI mode 2-
+1- On Terminal just execute interactive_chat.py
+2- Model will load and then you have to type your question.
+3- You can ask as many questions as you want without needing to execute every time 
+4- To terminate the program type "exit" and it will close.
+
+For Web UI mode-
+1- First start the backend using this command- "python -m uvicorn api:app --host 127.0.0.1 --port 8000 --reload"
+2- Then start the frontend using this command- "python -m http.server 15500"
+Then open this url- "http://127.0.0.1:15500/index.html"
+Then you can ask you query in the text box.
