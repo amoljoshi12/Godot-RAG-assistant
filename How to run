@@ -1,0 +1,6 @@
+This is a model specifically trained for godot game engine v4.0
+This requires minimum of 4GB vramm GPU along with 16GB RAM.
+This can run on either CLI mode or a Web UI mode
+To run on CLI mode it has two modes.
+CLI mode 1-
+On Terminal just simply execute rag
